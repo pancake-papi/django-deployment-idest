@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+</div>
+    
+<div class="wrapper">
+
+    <div class="clear"></div>
+    
+    <div class="indexcolumn">
+    <div class="container base mu1">
+        <div class="clear"></div>
+        <h1>Featured Articles</h1>
+        <hr>
+        <div class="container">
+        <h2 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Volupt</h2>
+        
+        {% for post in posts %}
+        <hr>
+        <div class="posts">
+        <img src="{{ post.featured_image.url}}" class="round postimg" alt="no image here" style="width: 50%; align-self: center;">
+        <div class="post" style="width: 50%;">
+                
+            <h2><a href="{% url 'articles:post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <div class="date">
+                <p>Published on: {{post.publish_date|date:"D d M Y"}}</p>
+                <p>{{ post.text|safe|striptags|truncatechars:150 }}</p>
+            </div>
+        </div>
+        </div> 
+    {% empty %}
+        <p>No Articles to Share</p>
+
+    
+    {% endfor %}
+        <hr>
+        </div>
+    </div>
+    <div style="align-self:center;" class="container base mu2">
+        <div class="clear"></div>
+        <h1>Check out our spotify playlist!</h1>
+        <h4 style="padding: 2%; text-align: center;">Highlighting new releases from bands from the IE</h4>
+        <p style="padding: 3%;">This months realeases includes: Dear Donna, Integra Pink, The Hayds etc etc</p>
+        <div class="imagecolumn">
+            <img src="{% static 'images/playlist/California_Ave.png' %}" class="playlistimg" alt="">
+            <img src="{% static 'images/playlist/froggy.jpeg' %}" class="playlistimg" alt="">
+        </div>
+        <div class="imagecolumn">
+            <img src="{% static 'images/playlist/title_white.png' %}" class="playlistimg" alt="">
+            <img src="{% static 'images/playlist/VibesAreWhoopty.jpg' %}" class="playlistimg" alt="">
+        </div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+            
+    </div>
+    </div>
+    
+
+<div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    
+
+<div id="footer">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+            <h5>Website made by Oscar Corona</h5>
+    </footer>
+</div>
+</div>
+</div>      
+    
+</body>
+
+{% endblock %}
+    
+
+</html>
