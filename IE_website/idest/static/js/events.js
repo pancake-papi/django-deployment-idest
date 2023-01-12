@@ -1,4 +1,4 @@
-var font = 0
+var font = 1
 
 $('h1').on('click',function(){
     //$('.collapse').collapse():
@@ -14,7 +14,7 @@ $('.changefont').on('click',function(){
     }else if (font%2 !== 0){
         
         console.log('com');
-        $('p').css({"font-family":'COMPAGNON-ROMAN','font-weight':"bold"});
+        $('p').css({"font-family": 'Comic Sans MS','font-weight':"bold"});
             
         
     }

@@ -26,6 +26,7 @@ html{
 .base{
     
     background-image: url('/static/images/paper_background_blue.jpg');
+    background-size: 42em ;
     box-shadow: 25px 22px 25px #282828;
     -moz-box-shadow: 25px 22px 25px #282828;
     -webkit-box-shadow: 25px 22px 25px #282828;
@@ -45,10 +46,10 @@ html{
 }
 
 .courier{
-    font-family: 'COURIERPRIME-REGULAR';
+    font-family: Comic Sans MS
 }
 p{
-    font-family: 'COMPAGNON-ROMAN';
+    font-family: 'COURIERPRIME-REGULAR';
     font-weight: bold;
 }
 body{
