@@ -24,7 +24,7 @@
     
     <hr>
 
-    <h4>By {{object.author}}</h4>
+    <h4>By {{object.author.first_name}} {{object.author.last_name}}</h4>
 
     {% if object.publish_date %}
     <h5>Published on {{object.publish_date}}</h5>
@@ -54,7 +54,7 @@
     <a class='btn btn-primary btn-comment' href="{% url 'articles:add_comment_to_post' pk=object.pk %}">Add Comment</a>
     <hr>
 
-
+    
 
     {% for comment in object.comments.all %}
     

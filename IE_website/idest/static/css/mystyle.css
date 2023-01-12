@@ -31,10 +31,30 @@ html{
     -webkit-box-shadow: 25px 22px 25px #282828;
     -khtml-box-shadow: 25px 22px 25px #282828;
 }
+@font-face {
+    font-family: 'SPECIALELITE';
+    src: url("/static/fonts/SPECIALELITE.ttf"); 
+}
+@font-face {
+    font-family: 'COMPAGNON-ROMAN';
+    src: url("/static/fonts/COMPAGNON-ROMAN.otf");
+}
+@font-face {
+    font-family: 'COURIERPRIME-REGULAR';
+    src: url("/static/fonts/COURIERPRIME-REGULAR.ttf");
+}
+
+.courier{
+    font-family: 'COURIERPRIME-REGULAR';
+}
+p{
+    font-family: 'COMPAGNON-ROMAN';
+    font-weight: bold;
+}
 body{
     background-image: url('/static/images/title_black.png');
     background-size: 25em;
-    font-family:'Noto Serif', serif;
+    font-family: 'SPECIALELITE';
     
     position: relative;
     margin: 0;
@@ -94,6 +114,9 @@ h1{
     .playlistimg{
         width: 50%;
         
+    }
+    p{
+        font-size: 1.17em;
     }
 }
 .imagecolumn{
