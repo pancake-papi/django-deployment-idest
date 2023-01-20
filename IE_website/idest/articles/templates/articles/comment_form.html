@@ -1,6 +1,8 @@
 {% extends 'articles/base.html' %}
 {%load static%}
 {% block body_block %}
+<div class="borderimg">
+<div class="base">
 <div class="clear"></div>
 <div class="container">
     <h1>New Comment</h1>
@@ -12,5 +14,6 @@
     </form>
 </div>
 <script>var editor = new MediumEditor('.editable');</script>
+</div></div>
 
 {% endblock %}

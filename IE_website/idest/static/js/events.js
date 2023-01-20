@@ -9,7 +9,7 @@ $('.changefont').on('click',function(){
     if ((font%2) === 0){
         
         console.log('cou');
-        $('p').css({"font-family":'COURIERPRIME-REGULAR'});
+        $('p').css({"font-family":'Courier Prime, monospace'});
             
     }else if (font%2 !== 0){
         
