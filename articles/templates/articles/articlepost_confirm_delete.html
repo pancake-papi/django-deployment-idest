@@ -1,0 +1,15 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+<div class="clear"></div>
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure you wanna delete {{ object }}</p>
+    <input type="submit" class="btn btn-danger" value="Delete">
+</form>
+</div></div>
+
+
+{% endblock %}
