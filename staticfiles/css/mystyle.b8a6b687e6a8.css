@@ -1,0 +1,204 @@
+html{
+    height: 100%;
+}
+.navbar-custom{
+    background-color: #274029;
+    box-shadow: 0px 10px 13px #282828;
+    -moz-box-shadow: 0px 10px 13px #282828;
+    -webkit-box-shadow: 0px 10px 13px #282828;
+    -khtml-box-shadow: 0px 10px 13px #282828;
+}
+/* Modify brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+	color: #cecedd;
+}
+.navbar-custom .navbar-nav .nav-link {
+    color: #cecedd;
+    font-size: 1.5em;
+}
+.container{
+    background-color: transparent;
+    color: black;
+    min-height: 100%;
+    position: relative;
+    
+    
+    
+    
+}
+
+.base{
+
+    background-image: url("/static/images/paper_background_blue.24a53f1bdd3b.jpg");
+    background-size: 35em ;
+    padding: 3%;
+    
+}
+@font-face {
+    font-family: 'SPECIALELITE';
+    src: url("/static/fonts/SPECIALELITE.e91f4ee1fa3e.ttf"); 
+}
+@font-face {
+    font-family: 'COMPAGNON-ROMAN';
+    src: url("/static/fonts/COMPAGNON-ROMAN.64be92512bce.otf");
+}
+@font-face {
+    font-family: 'COURIERPRIME-REGULAR';
+    src: url("/static/fonts/COURIERPRIME-REGULAR.fba4686ed1d1.ttf");
+}
+
+.courier{
+    font-family: Comic Sans MS
+}
+p{
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+}
+body{
+    font-family: 'Special Elite', cursive;
+    
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+
+}
+h1{
+    text-align: center;
+}
+.clear {
+    clear: both; height: 30px; 
+}
+
+.post{
+    padding-left: 5%;
+}
+.login{
+    color: #274029;
+}
+/* This is for phones */
+@media screen and (max-width: 1144px) {
+    .postimg2{
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .postimg{
+        object-fit: cover;
+        aspect-ratio: 1.6;
+        width:100%; 
+        align-self: center;
+    }
+    .post{
+        width: 100%;
+    }
+    .indexcolumn{
+        flex-direction:row;
+        display: contents;
+    }
+    .mu1{
+        width: 90%;
+    }
+    .mu2{
+        width: 90%;
+        align-content: center;
+    }
+    .playlistimg{
+        width: 50%;
+        
+    }
+    body{
+        background-image: url("/static/images/title_black.46d4532bb46b.png");
+        background-size: 10em;
+    }
+    .borderimg{
+        border: 1em solid transparent;
+        
+        border-image: url("/static/images/burned_paper.e79f4050f30c.png") 150 round;
+        
+    }
+}
+/* For screens bigger than phones */
+@media screen and (min-width: 1144px) {
+    .postimg2{
+        max-height: 125px;
+        max-width: 200px;
+    }
+    .postimg{
+        object-fit: cover;
+        aspect-ratio: 1.6;
+        width:50%; 
+        align-self: center;
+    }
+    .post{
+        width: 50%;
+    }
+    .posts{
+        display: flex;
+        flex-direction: row;
+    }
+    .indexcolumn{
+    display: flex;
+    flex-direction: row;
+    }
+    .mu1{
+        width: 75%;
+        margin: 3%;
+    }
+    .mu2{
+        width: 25%;
+        margin: 5%;
+    }
+    .playlistimg{
+        width: 50%;
+        
+    }
+    p{
+        font-size: 1.17em;
+    }
+    body{
+        background-image: url("/static/images/title_black.46d4532bb46b.png");
+        background-size: 25em;
+    }
+    .borderimg{
+        border: 3em solid transparent;
+        
+        border-image: url("/static/images/burned_paper.e79f4050f30c.png") 150 round;
+        
+    }
+}
+.imagecolumn{
+    display: flex;
+    flex-direction: row;
+    }
+#footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    height:100px;
+    width: 100%;
+    background-color: black;
+    
+}
+footer{
+    
+    color: #c4c4c4;
+    font-size: 0.5em;
+    text-align: end;
+    width: 100%;
+}
+.wrapper{
+    padding: 10px;
+}
+.dottedhr {
+    border: 0;
+    height: 30px;
+    background-image: url("/static/images/hr.dbb42ef93f46.png");
+    background-size: 115% 30px;
+    opacity: 100%;
+    object-fit: fill;
+    width: 100%;
+}
+    
