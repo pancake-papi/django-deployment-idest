@@ -6,8 +6,9 @@ from django.conf import settings
 app_name = 'articles'
 
 urlpatterns = [
-    path("",views.IndexView.as_view(),name='index'),
+    ###path("",views.IndexView.as_view(),name='index'),
     path("musicindex",views.MusicIndexView.as_view(),name='musicindex'),
+    path("",views.MusicIndexView.as_view(),name='index'),
     path('articlelist',views.PostListView.as_view(),name='articlelist'),
     path('post/<int:pk>/',views.ArticlePostDetailView.as_view(),name='post_detail'),
     path('post/create/',views.CreateArticleView.as_view(),name='post_new'),

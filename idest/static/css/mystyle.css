@@ -26,8 +26,12 @@ html{
     
     
     
+    
 }
-
+.coollink{
+    text-decoration: none;
+    color: black;
+}
 .base{
 
     background-image: url('/static/images/paper_background_blue.jpg');
@@ -165,6 +169,9 @@ h1{
         
         border-image: url('/static/images/burned_paper.png') 150 round;
         
+    }
+    .welcomecolumn{
+        width: 50%;
     }
 }
 .imagecolumn{

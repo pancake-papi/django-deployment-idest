@@ -2,7 +2,10 @@
 {% extends 'articles/base.html' %}
 {%load static%}
 {% block body_block %}
-</div>
+<div class="borderimg">
+    <div class="base">
+        <h1><img src="{% static 'images/Logos/Logo_display_green_yellow.png' %}" style="max-width: 100%;" alt="No image"></h1>
+</div></div></div>
 
 
 
@@ -18,21 +21,21 @@
             <h1>Featured Articles</h1>
             <hr>
             <div class="container">
-            <h2 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Volupt</h2>
+            <h2 style="text-align: center;">Our latest articles about the IE music scene.</h2>
             
             {% for post in posts %}
             <hr>
-            <div class="posts">
+            <a href="{% url 'articles:post_detail' pk=post.pk %}" class="coollink"><div class="posts">
             <img src="{{ post.featured_image.url}}" class="round postimg" alt="no image here" >
             <div class="post" >
                 <p></p>
-                <h2><a href="{% url 'articles:post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <h2>{{ post.title }}</h2>
                 <div class="date">
                     <p>Published on: {{post.publish_date|date:"D d M Y"}}</p>
                     <p>{{ post.text|safe|striptags|truncatechars:150 }}</p>
                 </div>
             </div>
-            </div> 
+            </div></a>
         {% empty %}
             <p>No Articles to Share</p>
 

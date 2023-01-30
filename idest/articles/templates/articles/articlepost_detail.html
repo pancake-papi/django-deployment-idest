@@ -64,7 +64,7 @@
             {{comment.create_date}}
             {% if comment.approved_comment %}
             <p>{{comment.text|safe|linebreaks}}</p>
-            <p>Posted By: {{comment.author}}</p>
+            Posted By: {{comment.author}}
             {%else%}
             
             <p>{{comment.text|safe|linebreaks}}</p>
@@ -78,7 +78,7 @@
             </a>
             {%endif%}
             
-            
+            <hr class="dottedhr">
             
         {%endif%}
         {% empty%}
