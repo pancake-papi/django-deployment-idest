@@ -1,4 +1,7 @@
-.db.sqlite3
-articles/__pychache__/
-idest/__pycache__/
+idest/db.sqlite3
+idest/articles/__pycache__/
+idest/idest/__pycache__/
 media/
+*.pyc
+*.pyo
+*.sqlite3
