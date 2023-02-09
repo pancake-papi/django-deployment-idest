@@ -10,7 +10,7 @@
 <div class="container">
 <div class="container">
     {% for post in posts %}
-    <hr>
+    <hr class="dottedhr">
     <a href="{% url 'articles:post_detail' pk=post.pk %}" class="coollink">
         <div class="posts">
             <img src="{{ post.featured_image.url}}" class="round postimg2" alt="no image here">

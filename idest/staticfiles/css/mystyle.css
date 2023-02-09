@@ -26,8 +26,12 @@ html{
     
     
     
+    
 }
-
+.coollink{
+    text-decoration: none;
+    color: black;
+}
 .base{
 
     background-image: url('/static/images/paper_background_blue.jpg');
@@ -166,6 +170,9 @@ h1{
         border-image: url('/static/images/burned_paper.png') 150 round;
         
     }
+    .welcomecolumn{
+        width: 50%;
+    }
 }
 .imagecolumn{
     display: flex;
@@ -196,6 +203,15 @@ footer{
     border: 0;
     height: 30px;
     background-image: url('/static/images/hr.png');
+    background-size: 115% 30px;
+    opacity: 100%;
+    object-fit: fill;
+    width: 100%;
+}
+hr{
+    border: 0;
+    height: 30px;
+    background-image: url('/static/images/linedhr.png');
     background-size: 115% 30px;
     opacity: 100%;
     object-fit: fill;
