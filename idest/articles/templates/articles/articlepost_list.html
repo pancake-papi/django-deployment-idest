@@ -1,0 +1,37 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+<div class="clear"></div>
+<div class="container">
+    <h1>List of past Articles</h1>
+</div>
+<div class="container">
+<div class="container">
+    {% for post in posts %}
+    <hr class="dottedhr">
+    <a href="{% url 'articles:post_detail' pk=post.pk %}" class="coollink">
+        <div class="posts">
+            <img src="{{ post.featured_image.url}}" class="round postimg2" alt="no image here">
+            <p></p>
+            <div class="post">
+                    
+                <h2>{{ post.title }}</h2>
+                <div class="date">
+                    <p>Published on: {{post.publish_date|date:"D d M Y"}}</p>
+                </div>
+                <p>Comments: {{ post.approve_comments.count }}</p>
+        </div>
+        </div></a>
+    {% empty %}
+        <p>No Articles to Share</p>
+
+    
+    {% endfor %}
+       
+</div></div>
+<div class="clear"></div></div>
+</div>
+
+{% endblock %}

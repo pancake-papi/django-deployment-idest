@@ -1,0 +1,28 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+
+<h1>Welcome to Id Est!</h1>
+<div class="clear" ></div>
+<h3></h3>
+<div class="indexcolumn" >
+    <a href="{% url 'articles:musicindex' %}" class="container welcomecolumn coollink"><div  style="text-align: center;">
+        <h1 >Music</h1>
+        <p>Latest music articles</p>
+    </div></a>
+    <div class=" container welcomecolumn" style="text-align: center;">
+        <h1>Film</h1>
+        <p>Latest music articles</p>
+    </div>
+    <div class=" container welcomecolumn" style="text-align: center;">
+        <h1>Art</h1>
+        <p>Latest music articles</p>
+    </div>
+    
+</div>
+</div>
+
+</div></div>
+{% endblock %}

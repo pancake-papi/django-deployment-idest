@@ -1,0 +1,21 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+
+<div class="clear"></div>
+<div class="container">
+    <h1>New Post</h1>
+    <form class="post-form" method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="save btn btn-primary" name="button">Save</button>
+    </form>
+    <hr>
+    <h3>FOR BEST LOOK USE IMAGE WITH A 16:9 ASPECT RATIO. NOT VERTICAL</h3>
+</div>
+
+<script>var editor = new MediumEditor('.editable');</script>
+</div></div>
+{% endblock %}

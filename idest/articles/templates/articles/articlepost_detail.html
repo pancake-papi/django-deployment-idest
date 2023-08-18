@@ -1,0 +1,97 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+<div class="container">
+
+
+    {% if object.featured_image %}
+        <img src="{% static 'images/taped.png'%}" class='tape' alt="">
+
+        <div class='container-fluid'>
+            <img src="{{ object.featured_image.url}}" class="featuredImage" alt="Img not available">
+        </div>
+
+        
+    {%else%}
+    <p>No Featured Image</p>
+    {%endif%}
+    <div class="clear"></div>
+
+    <h1 class="posttitle">{{object.title}}</h1>
+
+    <hr>
+
+    <h4>By {{object.author.first_name}} {{object.author.last_name}}</h4>
+
+    {% if object.publish_date %}
+    <h5>Published on {{object.publish_date}}</h5>
+    {% else %}
+        {% if user.is_authenticated %}
+        <p>Creation Date: {{object.create_date}}</p>
+        <a class="btn btn-primary" href="{% url 'articles:post_publish' pk=object.pk %}">Publish</a>
+        {%endif%}
+    {% endif %}
+
+    <hr>
+
+    <p class="postcontent">{{object.text|safe|linebreaksbr}}</p>
+
+    {% if user.is_authenticated %}
+        <a class="btn btn-dark" href="{% url 'articles:post_update' pk=object.pk %}">
+            <i class="bi bi-pencil icon-black"> edit </i>
+        </a>
+        <a class="btn btn-danger" href="{% url 'articles:post_delete' pk=object.pk %}">
+            <span class="bi bi-x icon-black"> delete</span>
+        </a>
+
+
+    {%endif%}
+    <hr>
+
+    <h5>Tags:</h5>
+    <ul>
+    {% for tag in object.tags.all %}
+        <li>{{ tag.name }}</li>
+    {% endfor %}
+    </ul>
+    
+    <hr>
+    
+    <a class='btn btn-dark btn-comment icon-black' href="{% url 'articles:add_comment_to_post' pk=object.pk %}">Add Comment</a>
+    <hr>
+
+    
+
+    {% for comment in object.comments.all %}
+    
+        {% if user.is_authenticated or comment.approved_comment %}
+            {{comment.create_date}}
+            {% if comment.approved_comment %}
+            <p>{{comment.text|safe|linebreaks}}</p>
+            Posted By: {{comment.author}}
+            {%else%}
+            
+            <p>{{comment.text|safe|linebreaks}}</p>
+            <p>Posted By: {{comment.author}}</p>
+            <h5>Comment not Approved</h5>
+            <a class="btn btn-primary" href="{% url 'articles:comment_approve' pk=comment.pk %}">
+                <span class="bi bi-check"></span>
+            </a>
+            <a class="btn btn-danger" href="{% url 'articles:comment_remove' pk=comment.pk %}">
+                <span class="bi bi-x"></span>
+            </a>
+            {%endif%}
+            
+            <hr class="dottedhr">
+            
+        {%endif%}
+        {% empty%}
+        <p>No Comments</p>
+    {%endfor%}
+</div>
+</div></div>
+
+{% endblock %}

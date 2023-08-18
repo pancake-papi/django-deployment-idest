@@ -1,0 +1,19 @@
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+<div class="base">
+<div class="clear"></div>
+<div class="container">
+    <h1>Draft List</h1>
+    {% for post in drafts %}
+    
+        <p class="date">Date created: {{ post.create_date|date:'d-m-Y'}}</p>
+        <h1><a href="{% url 'articles:post_detail' pk=post.pk %}">{{post.title}}</a></h1>
+        <p>{{ post.text|truncatechars:200}}</p>
+        <hr>
+    {% endfor%}
+</div>
+</div></div>
+
+{% endblock %}

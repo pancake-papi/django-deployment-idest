@@ -1,0 +1,47 @@
+.postimg2{
+    align-self: center;
+    object-fit: cover;
+    aspect-ratio: 1.6;
+    max-width: auto;
+    
+}
+.featuredImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    max-height: 1000px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0px 7px 5px #282828;
+    -moz-box-shadow: 0px 7px 5px #282828;
+    -webkit-box-shadow: 0px 7px 5px #282828;
+    -khtml-box-shadow: 0px 7px 5px #282828;
+    margin-top: 5%;
+    background-color: black;
+}
+.tape{
+    width: 79%;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 79%;
+    transform: translateY(-7%);
+    
+}
+@media screen and (max-width: 767px) {
+    .tape{
+        width: 90%;
+        
+        transform: translateY(-7%);
+        
+    }
+    .featuredImage{
+        width: 95%;
+    }
+    
+}

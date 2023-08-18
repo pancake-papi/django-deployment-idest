@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% extends 'articles/base.html' %}
+{%load static%}
+{% block body_block %}
+<div class="borderimg">
+    <div class="base">
+        <h1><img src="{% static 'images\IDESTModern_light.png' %}" style="max-width: 100%;" alt="No image"></h1>
+</div></div></div>
+    
+    <div class="indexcolumn">
+    
+    <div class="container mu1">
+    <div class="borderimg">
+        
+        <div class="base">
+            <div class="clear"></div>
+            <h1>Featured Articles</h1>
+            <hr>
+            <div class="container">
+            <h2 style="text-align: center;">Our latest articles about the IE music scene.</h2>
+            
+            {% for post in posts %}
+            <hr class="dottedhr">
+            <a href="{% url 'articles:post_detail' pk=post.pk %}" class="coollink"><div class="posts">
+            <img src="{{ post.featured_image.url}}" class="round postimg" alt="no image here" >
+            <div class="post" >
+                <p></p>
+                <h2>{{ post.title }}</h2>
+                <div class="date">
+                    <p>Published on: {{post.publish_date|date:"D d M Y"}}</p>
+                    <p>{{ post.text|safe|striptags|truncatechars:150 }}</p>
+                </div>
+            </div>
+            </div></a>
+        {% empty %}
+            <p>No Articles to Share</p>
+
+        
+        {% endfor %}
+            <hr>
+                <h3><a href="{% url 'articles:articlelist'%}">For a list of all articles click here</a></h3>
+            <hr>
+            </div>
+        </div>
+        </div>
+        </div>
+    <div class="container mu2">
+    <div class="borderimg">
+    <div style="align-self:center;" class="base">
+        <div class="clear"></div>
+        <h1>Check out our spotify playlist!</h1>
+        <h4 style="padding: 2%; text-align: center;">Highlighting new releases from bands from the IE</h4>
+        <p style="padding: 3%;text-align: center;">This months realeases includes: Dear Donna, Integra Pink, The Hayds etc etc</p>
+        <div class="imagecolumn">
+            <img src="{% static 'images/playlist/California_Ave.png' %}" class="playlistimg" alt="">
+            <img src="{% static 'images/playlist/froggy.jpeg' %}" class="playlistimg" alt="">
+        </div>
+        <div class="imagecolumn">
+            <img src="{% static 'images/playlist/title_white.png' %}" class="playlistimg" alt="">
+            <img src="{% static 'images/playlist/VibesAreWhoopty.jpg' %}" class="playlistimg" alt="">
+        </div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+            
+    </div></div></div>
+    </div>
+    
+
+<div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    
+
+
+</div>
+
+
+    
+
+</body>
+
+{% endblock %}
+    
+
+</html>

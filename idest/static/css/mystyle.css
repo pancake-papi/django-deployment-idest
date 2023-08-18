@@ -1,0 +1,195 @@
+html{
+    height: 100%;
+}
+.navbar-custom{
+    background-color: black;
+    background-size: 30em ;
+    padding: 1%;
+    color: white;
+}
+/* Modify brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+	color: #cecedd;
+}
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    font-size: 1.5em;
+}
+.container{
+    background-color: transparent;
+    color: black;
+    min-height: 100%;
+    position: relative;
+}
+.logonav{
+    height: 40px;
+    object-fit: contain;
+}
+.coollink{
+    text-decoration: none;
+    color: black;
+}
+/*.base{
+
+    
+}*/
+.navlogo{
+    max-height: 60px;
+}
+.courier{
+    font-family: Comic Sans MS
+}
+p{
+    
+    font-family: 'Josefin Sans', sans-serif;
+    
+    font-weight: bold;
+}
+body{
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgba(255, 255, 255, 0.425);
+    background-image: url('/static/images/paper_background_blue.jpg');
+    
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+
+}
+h1{
+    text-align: center;
+}
+.clear {
+    clear: both; height: 30px; 
+}
+
+.post{
+    padding-left: 5%;
+}
+.login{
+    color: #274029;
+}
+/* This is for phones */
+@media screen and (max-width: 1144px) {
+    .postimg2{
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .postimg{
+        object-fit: cover;
+        aspect-ratio: 1.6;
+        width:100%; 
+        align-self: center;
+    }
+    .post{
+        width: 100%;
+    }
+    .indexcolumn{
+        flex-direction:row;
+        display: contents;
+    }
+    .mu1{
+        width: 90%;
+    }
+    .mu2{
+        width: 90%;
+        align-content: center;
+    }
+    .playlistimg{
+        width: 50%;
+        
+    }
+    body{
+        background-color: white;
+        
+    }
+    /*.borderimg{
+        border: 1em solid transparent;
+        
+        border-image: url('/static/images/burned_paper.png') 150 round;
+        
+    }*/
+}
+/* For screens bigger than phones */
+@media screen and (min-width: 1144px) {
+    .postimg2{
+        max-height: 125px;
+        max-width: 200px;
+    }
+    .postimg{
+        object-fit: cover;
+        aspect-ratio: 1.6;
+        width:50%; 
+        align-self: center;
+    }
+    .post{
+        width: 50%;
+    }
+    .posts{
+        display: flex;
+        flex-direction: row;
+    }
+    .indexcolumn{
+    display: flex;
+    flex-direction: row;
+    }
+    .mu1{
+        width: 75%;
+        margin: 3%;
+    }
+    .mu2{
+        width: 25%;
+        margin: 5%;
+    }
+    .playlistimg{
+        width: 50%;
+        
+    }
+    p{
+        font-size: 1.17em;
+    }
+    body{
+        background-color: white;
+    }
+    /*.borderimg{
+        border: 3em solid transparent;
+        
+        border-image: url('/static/images/burned_paper.png') 150 round;
+        
+    }*/
+    .welcomecolumn{
+        width: 50%;
+    }
+}
+
+.icon-black{
+    color: white;
+}
+.imagecolumn{
+    display: flex;
+    flex-direction: row;
+    }
+#footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    height:100px;
+    width: 100%;
+    background-color: black;
+    
+}
+footer{
+    
+    color: #c4c4c4;
+    font-size: 0.5em;
+    text-align: end;
+    width: 100%;
+}
+.wrapper{
+    padding: 10px;
+}
+
+    
