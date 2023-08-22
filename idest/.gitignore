@@ -1,7 +1,7 @@
-idest/db.sqlite3
-idest/articles/__pycache__/
-idest/idest/__pycache__/
-idest/media
+db.sqlite3
+articles/__pycache__/
+idest/__pycache__/
+media/featured_images/
 *.pyc
 *.pyo
 *.sqlite3
