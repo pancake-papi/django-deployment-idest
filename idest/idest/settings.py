@@ -14,6 +14,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
+#google Storage
+from google.oauth2 import service_account
+
 
 
 load_dotenv()
@@ -21,6 +24,11 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+
+
+
+LOGIN_REDIRECT_URL = "/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -50,6 +58,7 @@ INSTALLED_APPS = [
     'django_filters',
     'taggit',
     'taggit_serializer',
+    'upload',
 ]
 
 REST_FRAMEWORK = {
@@ -143,12 +152,24 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'URL.to.GCS/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
-LOGIN_REDIRECT_URL = "/"
+
+#Google storage
+
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    os.path.join(BASE_DIR, os.environ.get('GS_PATH'))
+)
+
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = os.environ.get('BUCKETNAME')
+
+#GS_EXPIRATION = timedelta(minutes=5)
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
