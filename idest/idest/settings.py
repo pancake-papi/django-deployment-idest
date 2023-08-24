@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+import json
 
 #google Storage
 from google.oauth2 import service_account
@@ -157,12 +158,17 @@ MEDIA_URL = 'URL.to.GCS/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
+# Google Credentials from ENV JSON
+gs_json_data = json.loads(os.environ.get("DJANGO_GS_CREDENTIALS"))
+# the private_key needs to replace \n parsed as string literal with escaped newlines
+gs_json_data["private_key"] = gs_json_data["private_key"].replace("\\n", "\n")
+GS_CREDENTIALS = service_account.Credentials.from_service_account_info(gs_json_data)
 
 #Google storage
 
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    os.path.join(BASE_DIR, os.environ.get('GS_PATH'))
-)
+#GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+#    os.path.join(BASE_DIR, os.environ.get('GS_PATH'))
+#)
 
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME = os.environ.get('BUCKETNAME')
