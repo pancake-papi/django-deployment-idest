@@ -33,12 +33,45 @@
     transform: translateY(-7%);
     
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .tape{
+        width: 93%;
+        
+        transform: translateY(-7.6%);
+        /*background-color: rgb(0, 170, 65);*/
+    }
+    .featuredImage{
+        width: 95%;
+    }
+    
+}
+@media screen and (min-width: 769px) {
+    .tape{
+        width: 79%;
+        
+        transform: translateY(-7%);
+        /*background-color: rgb(11, 0, 161);*/
+    }
+    
+}
+@media screen and (max-width: 420px) {
     .tape{
         width: 90%;
         
-        transform: translateY(-7%);
+        transform: translateY(-7.6%);
+        /*background-color: rgb(122, 0, 0);*/
+    }
+    .featuredImage{
+        width: 95%;
+    }
+    
+}
+@media screen and (max-width: 290px) {
+    .tape{
+        width: 83.5%;
         
+        transform: translateY(-7.6%);
+        /*background-color: black;*/
     }
     .featuredImage{
         width: 95%;

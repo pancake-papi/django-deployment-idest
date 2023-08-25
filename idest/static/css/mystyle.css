@@ -22,10 +22,6 @@ html{
     min-height: 100%;
     position: relative;
 }
-.logonav{
-    height: 40px;
-    object-fit: contain;
-}
 .coollink{
     text-decoration: none;
     color: black;
@@ -34,9 +30,7 @@ html{
 
     
 }*/
-.navlogo{
-    max-height: 60px;
-}
+
 .courier{
     font-family: Comic Sans MS
 }
@@ -110,6 +104,10 @@ h1{
         border-image: url('/static/images/burned_paper.png') 150 round;
         
     }*/
+    .navlogo{
+        height: 2em;
+        object-fit: contain;
+    }
 }
 /* For screens bigger than phones */
 @media screen and (min-width: 1144px) {
@@ -160,6 +158,10 @@ h1{
     }*/
     .welcomecolumn{
         width: 50%;
+    }
+    .navlogo{
+        height: 3.5em;
+        object-fit: contain;
     }
 }
 

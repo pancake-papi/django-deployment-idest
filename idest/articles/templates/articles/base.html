@@ -32,7 +32,7 @@
 <body>
     <nav class="navbar navbar-light  navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{%url 'articles:index'%}"><img src="{% static '\images\IDESTModern_dark.png' %}" class="navlogo">
+            <a class="navbar-brand" href="{%url 'articles:index'%}"><img src="{% static '\images\IDESTModern_light.png' %}" class="navlogo">
             </a>
             <button class="navbar-toggler toggler-custom navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -158,12 +158,52 @@
     
 
 <div id="footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4" style="width: 100%;">
+    
+    <footer class="text-center text-white" style="background-color: #000000;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-twitter icon-black"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/idestwebsite"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-instagram icon-black"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.youtube.com/channel/UC8PYmfksXabY7S63dMK6AXw"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-youtube icon-black"></i
+            ></a>
 
-        <h5>Website made by Oscar Corona</h5>
-        <h3 class="changefont btn btn-primary">Change font</h3>
-           
-    </footer>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        
+      
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <h4>Website made by Oscar Corona</h4>
+          
+        </div>
+        
+      </footer>
 </div>
 </div>       
     
