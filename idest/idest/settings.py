@@ -40,6 +40,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS=[os.environ.get('WEBSITE_NAME')]
 
@@ -151,7 +153,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE="django.contrib.staticfiles.storage.StaticFilesStorage"
 
 MEDIA_URL = 'URL.to.GCS/'
 

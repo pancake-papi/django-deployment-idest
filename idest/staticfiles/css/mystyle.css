@@ -2,9 +2,10 @@ html{
     height: 100%;
 }
 .navbar-custom{
-    background-image: url('/static/images/paper_background_blue.jpg');
-    background-size: 35em ;
-    padding: 3%;
+    background-color: black;
+    background-size: 30em ;
+    padding: 1%;
+    color: white;
 }
 /* Modify brand and text color */
 .navbar-custom .navbar-brand,
@@ -12,7 +13,7 @@ html{
 	color: #cecedd;
 }
 .navbar-custom .navbar-nav .nav-link {
-    color: #cecedd;
+    color: white;
     font-size: 1.5em;
 }
 .container{
@@ -20,43 +21,29 @@ html{
     color: black;
     min-height: 100%;
     position: relative;
-    
-    
-    
-    
-    
 }
 .coollink{
     text-decoration: none;
     color: black;
 }
-.base{
+/*.base{
 
-    background-color: #c4c4c4;
     
-}
-@font-face {
-    font-family: 'SPECIALELITE';
-    src: url("/static/fonts/SPECIALELITE.ttf"); 
-}
-@font-face {
-    font-family: 'COMPAGNON-ROMAN';
-    src: url("/static/fonts/COMPAGNON-ROMAN.otf");
-}
-@font-face {
-    font-family: 'COURIERPRIME-REGULAR';
-    src: url("/static/fonts/COURIERPRIME-REGULAR.ttf");
-}
+}*/
 
 .courier{
     font-family: Comic Sans MS
 }
 p{
-    font-family: 'Courier Prime', monospace;
+    
+    font-family: 'Josefin Sans', sans-serif;
+    
     font-weight: bold;
 }
 body{
-    font-family: 'Special Elite', cursive;
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgba(255, 255, 255, 0.425);
+    background-image: url('/static/images/paper_background_blue.jpg');
     
     position: relative;
     margin: 0;
@@ -109,12 +96,17 @@ h1{
     }
     body{
         background-color: white;
+        
     }
-    .borderimg{
+    /*.borderimg{
         border: 1em solid transparent;
         
         border-image: url('/static/images/burned_paper.png') 150 round;
         
+    }*/
+    .navlogo{
+        height: 2em;
+        object-fit: contain;
     }
 }
 /* For screens bigger than phones */
@@ -158,15 +150,23 @@ h1{
     body{
         background-color: white;
     }
-    .borderimg{
+    /*.borderimg{
         border: 3em solid transparent;
         
         border-image: url('/static/images/burned_paper.png') 150 round;
         
-    }
+    }*/
     .welcomecolumn{
         width: 50%;
     }
+    .navlogo{
+        height: 3.5em;
+        object-fit: contain;
+    }
+}
+
+.icon-black{
+    color: white;
 }
 .imagecolumn{
     display: flex;
@@ -193,22 +193,5 @@ footer{
 .wrapper{
     padding: 10px;
 }
-.dottedhr {
-    border: 0;
-    height: 30px;
-    background-image: url('/static/images/hr.png');
-    background-size: 115% 30px;
-    opacity: 100%;
-    object-fit: fill;
-    width: 100%;
-}
-hr{
-    border: 0;
-    height: 30px;
-    background-image: url('/static/images/linedhr.png');
-    background-size: 115% 30px;
-    opacity: 100%;
-    object-fit: fill;
-    width: 100%;
-}
+
     
