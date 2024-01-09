@@ -40,7 +40,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['idest.up.railway.app',"127.0.0.1"]
+ALLOWED_HOSTS = ['idest.up.railway.app',
+                 "127.0.0.1",
+                 "idestie.com"]
 CSRF_TRUSTED_ORIGINS=[os.environ.get('WEBSITE_NAME')]
 
 
