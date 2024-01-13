@@ -44,7 +44,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['idest.up.railway.app',
                  "127.0.0.1",
-                 "idestie.com"]
+                 "www.idestie.com"]
 CSRF_TRUSTED_ORIGINS=[os.environ.get('WEBSITE_NAME')]
 
 
