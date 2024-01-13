@@ -193,5 +193,7 @@ footer{
 .wrapper{
     padding: 10px;
 }
-
+a:hover{
+    color:red;
+}
     
