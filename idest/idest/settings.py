@@ -131,6 +131,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://idest.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://www.idestie.com']
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
